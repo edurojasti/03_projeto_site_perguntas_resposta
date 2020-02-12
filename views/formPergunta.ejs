@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include("partials/head.ejs")%>
+    <link rel="stylesheet" href="css/estilo-page-perguntar.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image">
+                <img src="img/gif01.gif" height="500" class="img-fluid">
+            </div>
+            <div 
+            class="col-md-8 col-lg-6" 
+            style="background-image: url('img/backgroundWHITE.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <div class="container">
+
+                                    <div class="container d-flex justify-content-start">
+                                        <img src="img/logo-perguntas.jpg" width="60">
+                                        <p 
+                                            class="text-dark mt-1" 
+                                            style="font-size: 35px; font-family: 'Lobster', cursive;">
+                                            La Pregunta?
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div class="card mt-3">
+                                        <div class="card-header text-dark p-3">
+                                            <h3 class="inserirPerguntaTitle">Inserir nova pergunta</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <form method="POST" class="form-group" action="/pergunta-registrada">
+                                                <label class="mt-2">Titulo:</label>
+                                                <input id="titPerg" name="tituloPergunta" type="text" class="form-control" placeholder="Digite o titulo da pergunta" required>
+                                                <label class="mt-2">Descrição:</label>
+                                                <textarea id="descPreg" name="descPregunta" cols="30" rows="10" placeholder="Descreva sua pergunta" class="form-control" required></textarea>
+                                                <div class="d-flex justify-content-end">
+                                                    <button class="btn-info btn mt-3 text-dark mr-3" onclick="alerta()">
+                                                        Perguntar
+                                                    </button>
+                                                    <a class="btn-dark btn mt-3 text-light" href="/">
+                                                        Cancelar
+                                                    </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function alerta(){
+            let titPerg = document.getElementById('titPerg').value
+            let descPreg = document.getElementById('titPerg').value
+
+            if(titPerg != "" || descPreg != ""){
+                alert('Pergunta registrada com sucesso!')
+            }
+        }
+    </script>
+</body>    
+</html>

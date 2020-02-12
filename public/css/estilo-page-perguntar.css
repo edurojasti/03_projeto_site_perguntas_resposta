@@ -1,0 +1,28 @@
+  :root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: 0.75rem;
+  }
+  
+  .login,
+  .image {
+    min-height: 100vh;
+  }
+  
+  .bg-image {
+    background-color: rgb(255, 202, 90);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-header, .btn-info{
+    background-color: rgb(255, 202, 90) !important;
+    border: none !important;
+  }
+
+  @media (max-width: 420px){
+    .inserirPerguntaTitle{
+      font-size: 22px;
+    }
+  }

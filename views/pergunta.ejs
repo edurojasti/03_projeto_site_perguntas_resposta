@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La Pregunta</title>
+
+    <link rel="stylesheet" href="../css/stylo.css">
+    <!-- CDN CSS BOOTSTRAP -->
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous"
+    >
+    <body style="background-image: url('img/backgroundWHITE.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
+       
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container d-flex justify-content-start" style="cursor: pointer;" onclick="location.href='/'">
+                <img src="../img/logo-perguntas.jpg" width="60">
+                <p class="text-light mt-3" style="font-size: 35px; font-family: 'Lobster', cursive;">La Pregunta?</p>
+            </div>
+        </nav>
+        
+        
+        <div class="container">
+            <div class="card mt-4 mb-2">
+                <div class="card-header">
+                <h2>
+                    <%= pergunta.titulo%>
+                </h2>
+                </div>
+                <div class="card-body">
+                <p class="card-text">
+                    <%= pergunta.descricao%>
+                </p>
+                <!-- <a href="#" class="btn text-dark" style="background-color: rgb(255, 202, 90);">Responder</a> -->
+                </div>
+            </div>
+         </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include("partials/head.ejs")%>
+    <body style="background-image: url('img/backgroundWHITE.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
+        <%- include("partials/navbar.ejs")%>
+        <div class="container d-flex justify-content-end">
+            <a class="btn mt-3 text-dark" style="background-color: rgb(255, 202, 90);" href="/perguntar">
+                Nova pergunta <i class="fas fa-plus-circle" style="font-size: 22px;"></i>
+            </a>
+        </div>
+        <div class="container">
+           <% perguntas.forEach((perguntaX)=>{%>
+           <div class="card mt-4 mb-4">
+                <div class="card-header">
+                <h2>
+                    <%= perguntaX.titulo%>
+                </h2>
+                </div>
+                <div class="card-body">
+                <p class="card-text">
+                    <%= perguntaX.descricao%>
+                </p>
+                <a href="/pergunta/<%= perguntaX.id%>" class="btn text-dark" style="background-color: rgb(255, 202, 90);">Responder</a>
+                </div>
+            </div>
+           <%})%>
+        </div>
+
+
+
+
+
+
+
+
+        
+    </body>
+</html>
